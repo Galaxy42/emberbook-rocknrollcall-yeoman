@@ -1,6 +1,6 @@
 // Generated on 2016-01-07 using generator-ember 0.8.6
 'use strict';
-var LIVERELOAD_PORT = 35729;
+var LIVERELOAD_PORT = process.env.LR_PORT || 35729;
 var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
 var mountFolder = function (connect, dir) {
     return connect.static(require('path').resolve(dir));
@@ -273,7 +273,7 @@ module.exports = function (grunt) {
                         ]
                     }
                 ]
-            }, 
+            },
             dist: {
                 files: [
                     {
